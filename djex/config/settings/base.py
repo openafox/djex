@@ -43,7 +43,7 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres:///djex")
+        "default": env.db("DATABASE_URL", default='sqlite:///bike-sqlite.db')
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
